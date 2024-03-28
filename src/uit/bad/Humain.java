@@ -19,14 +19,16 @@ public class Humain implements Consommation {
         System.out.println("Nom: "+this.nom+"\nPrenom: "+this.prenom+"\nAge: "+this.age);
     }
     
-    public void ami(Humain autreHumain){
+    public int ami(Humain autreHumain){
         ami(autreHumain, 100);
+        return amiDuration;
     }
     
-    public void ami(Humain autreHumain, int duration) { 
+    public int ami(Humain autreHumain, int duration) { 
         this.ami = autreHumain;
         autreHumain.ami = this;
         this.amiDuration = duration;
+        return amiDuration;
     }
     
     @Override
