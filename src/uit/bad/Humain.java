@@ -8,7 +8,7 @@ package uit.bad;
  *
  * @author thyler
  */
-public class Humain {
+public class Humain implements Consommation {
     String nom;
     String prenom;
     int age;
@@ -20,5 +20,15 @@ public class Humain {
     @Override
     public String toString() {
         return "Nom: " + this.nom + "\nPrénom: " + this.prenom + "\nAge: " + this.age;
+    }
+    
+    @Override
+    public void boire(){
+        
+    }
+
+    @Override
+    public void manger() {
+        
     }
 }
