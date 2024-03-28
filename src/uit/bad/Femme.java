@@ -26,4 +26,14 @@ public class Femme extends Humain {
     }
     
     //Femme's toString() Override Humain's toString()
+    
+    public static void main(String[] args){
+        Homme h = new Homme();
+        Femme f = new Femme();
+        
+        f.ami(h);
+        
+        h.details();
+        f.details();
+    }
 }

@@ -4,9 +4,6 @@
  */
 package uit.bad;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  *
  * @author thyler
@@ -15,26 +12,21 @@ public class Humain implements Consommation {
     String nom;
     String prenom;
     int age;
-    List<Humain> amis;
+    Humain ami;
+    int amiDuration = 100;
     
     public void details(){
-        System.out.println("Nom: "+this.nom+"\n\nPrenom: "+this.prenom+"Age: "+this.age);
+        System.out.println("Nom: "+this.nom+"\nPrenom: "+this.prenom+"\nAge: "+this.age);
     }
     
-    public void ami(Humain autreHumain) {
-        if (amis == null) {
-            amis = new ArrayList<>();
-        }
-        amis.add(autreHumain);
-        autreHumain.ajouterAmi(this); // Ajouter réciproquement l'humain comme ami de l'autre
+    public void ami(Humain autreHumain){
+        ami(autreHumain, 100);
     }
     
-    // Méthode pour ajouter un ami (réciproque)
-    private void ajouterAmi(Humain ami) {
-        if (amis == null) {
-            amis = new ArrayList<>();
-        }
-        amis.add(ami);
+    public void ami(Humain autreHumain, int duration) { 
+        this.ami = autreHumain;
+        autreHumain.ami = this;
+        this.amiDuration = duration;
     }
     
     @Override
