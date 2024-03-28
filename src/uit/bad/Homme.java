@@ -20,5 +20,12 @@ public class Homme extends Humain {
         this.age = age;
     }
     
+    @Override
+    public String toString() {
+        return "Nom: " + this.nom + "\nPrénom: " + this.prenom + "\nAge: " + this.age;
+    }
+    
+    //Homme's toString() Override Humain's toString()
+    
     
 }
