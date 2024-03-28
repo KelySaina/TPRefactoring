@@ -8,10 +8,7 @@ package uit.bad;
  *
  * @author thyler
  */
-public class Femme {
-    private String nom;
-    private String prenom;
-    private int age;
+public class Femme extends Humain {
 
     public Femme() {
     }
